@@ -1,11 +1,11 @@
 {
-  "name": "@my-ext/shared",
-  "private": true,
-  "exports": {
-    ".": "./src/index.ts"
-  },
-  "module": "src/index.ts",
-  "devDependencies": {
-    "@types/chrome": "^0.0.310"
-  }
+	"name": "@my-ext/shared",
+	"private": true,
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"module": "src/index.ts",
+	"devDependencies": {
+		"@types/chrome": "^0.0.310"
+	}
 }
