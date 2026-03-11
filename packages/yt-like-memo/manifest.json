@@ -19,5 +19,9 @@
 		"default_popup": "popup.html",
 		"default_title": "YT Like Memo"
 	},
-	"icons": {}
+	"icons": {
+		"16": "icons/icon128.png",
+		"48": "icons/icon128.png",
+		"128": "icons/icon128.png"
+	}
 }

@@ -50,12 +50,19 @@ function sendToBackground(video: LikedVideo): void {
 }
 
 function findLikeButton(): HTMLElement | null {
-	// Multiple like-button-view-model buttons exist (overlay, main, hidden).
-	// Find the first one that is actually visible on screen.
-	const buttons = document.querySelectorAll<HTMLElement>(
-		"like-button-view-model button",
-	);
+	// YouTube uses different components: like-button-view-model (older) or
+	// segmented-like-dislike-button-view-model (current watch page). Prefer visible one.
+	const selector =
+		"like-button-view-model button, segmented-like-dislike-button-view-model button[aria-label*='like' i]";
+	const buttons = document.querySelectorAll<HTMLElement>(selector);
 	for (const btn of buttons) {
+		if (btn.offsetParent !== null) return btn;
+	}
+	// Legacy / alternate structure
+	const legacy = document.querySelectorAll<HTMLElement>(
+		"ytd-toggle-button-renderer button[aria-label*='like' i]",
+	);
+	for (const btn of legacy) {
 		if (btn.offsetParent !== null) return btn;
 	}
 	return null;
@@ -72,7 +79,9 @@ function attachLikeListener(): void {
 	btn.addEventListener("click", () => {
 		requestAnimationFrame(() => {
 			setTimeout(() => {
-				if (currentLikeButton && isLiked(currentLikeButton)) {
+				// Re-query so we see updated aria-pressed (DOM may be replaced by YouTube)
+				const likeBtn = findLikeButton();
+				if (likeBtn && isLiked(likeBtn)) {
 					const video = collectVideoInfo();
 					if (video) {
 						sendToBackground(video);
