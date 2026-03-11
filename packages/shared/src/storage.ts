@@ -1,0 +1,2 @@
+// Chrome storage helpers
+export {};
