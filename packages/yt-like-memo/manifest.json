@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YT Like Memo",
+  "version": "0.1.0",
+  "description": "Auto-save liked YouTube videos as memos",
+  "permissions": ["storage"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YT Like Memo"
+  },
+  "icons": {}
+}
