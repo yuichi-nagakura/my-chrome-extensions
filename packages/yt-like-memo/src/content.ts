@@ -50,15 +50,15 @@ function sendToBackground(video: LikedVideo): void {
 }
 
 function findLikeButton(): HTMLElement | null {
-	const btn = document.querySelector<HTMLElement>(
-		'like-button-view-model button, segmented-like-dislike-button-view-model button[aria-label*="like" i]',
+	// Multiple like-button-view-model buttons exist (overlay, main, hidden).
+	// Find the first one that is actually visible on screen.
+	const buttons = document.querySelectorAll<HTMLElement>(
+		"like-button-view-model button",
 	);
-	if (btn) return btn;
-
-	const legacyBtn = document.querySelector<HTMLElement>(
-		'ytd-toggle-button-renderer#button[aria-label*="like" i] button',
-	);
-	return legacyBtn;
+	for (const btn of buttons) {
+		if (btn.offsetParent !== null) return btn;
+	}
+	return null;
 }
 
 let currentLikeButton: HTMLElement | null = null;
