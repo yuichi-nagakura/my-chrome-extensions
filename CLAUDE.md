@@ -167,7 +167,7 @@ const response = await claudeClient.complete({
 
 | パッケージ名 | 説明 | ステータス |
 |------------|------|-----------|
-| （追加されたら記載） | | |
+| @my-ext/yt-like-memo | YouTube高評価した動画を自動保存してポップアップで閲覧 | 開発中 |
 
 ---
 
