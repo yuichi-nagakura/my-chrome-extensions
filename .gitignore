@@ -4,3 +4,6 @@ dist/
 !.env.example
 .playwright-mcp
 docs/superpowers/
+.superpowers
+.playwright
+.playwright-mcp
