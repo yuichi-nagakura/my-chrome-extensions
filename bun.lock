@@ -12,6 +12,10 @@
     "packages/shared": {
       "name": "@my-ext/shared",
     },
+    "packages/yt-like-memo": {
+      "name": "@my-ext/yt-like-memo",
+      "version": "0.1.0",
+    },
   },
   "packages": {
     "@biomejs/biome": ["@biomejs/biome@2.4.6", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.4.6", "@biomejs/cli-darwin-x64": "2.4.6", "@biomejs/cli-linux-arm64": "2.4.6", "@biomejs/cli-linux-arm64-musl": "2.4.6", "@biomejs/cli-linux-x64": "2.4.6", "@biomejs/cli-linux-x64-musl": "2.4.6", "@biomejs/cli-win32-arm64": "2.4.6", "@biomejs/cli-win32-x64": "2.4.6" }, "bin": { "biome": "bin/biome" } }, "sha512-QnHe81PMslpy3mnpL8DnO2M4S4ZnYPkjlGCLWBZT/3R9M6b5daArWMMtEfP52/n174RKnwRIf3oT8+wc9ihSfQ=="],
@@ -33,6 +37,8 @@
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.4.6", "", { "os": "win32", "cpu": "x64" }, "sha512-7++XhnsPlr1HDbor5amovPjOH6vsrFOCdp93iKXhFn6bcMUI6soodj3WWKfgEO6JosKU1W5n3uky3WW9RlRjTg=="],
 
     "@my-ext/shared": ["@my-ext/shared@workspace:packages/shared"],
+
+    "@my-ext/yt-like-memo": ["@my-ext/yt-like-memo@workspace:packages/yt-like-memo"],
 
     "@types/chrome": ["@types/chrome@0.0.291", "", { "dependencies": { "@types/filesystem": "*", "@types/har-format": "*" } }, "sha512-pvzuUGY0dpO6qbikDEiKbiLLEUgSgnYnvk5mPNWImPcB/HWwkH/bvU5lR/XdPpB03W0jnEuOIXjblzAq759zkg=="],
 
