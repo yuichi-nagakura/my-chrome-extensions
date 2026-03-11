@@ -11,9 +11,6 @@
     },
     "packages/shared": {
       "name": "@my-ext/shared",
-      "devDependencies": {
-        "@types/chrome": "^0.0.310",
-      },
     },
   },
   "packages": {
@@ -44,7 +41,5 @@
     "@types/filewriter": ["@types/filewriter@0.0.33", "", {}, "sha512-xFU8ZXTw4gd358lb2jw25nxY9QAgqn2+bKKjKOYfNCzN4DKCFetK7sPtrlpg66Ywe3vWY9FNxprZawAh9wfJ3g=="],
 
     "@types/har-format": ["@types/har-format@1.2.16", "", {}, "sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A=="],
-
-    "@my-ext/shared/@types/chrome": ["@types/chrome@0.0.310", "", { "dependencies": { "@types/filesystem": "*", "@types/har-format": "*" } }, "sha512-2+C6NKe4DxGbT6v8noDOx5APEUtSxRL0Rzm2TVGYFkPi1fO36hiN9W1QIuGI93rdM34Qy4d+7orA+vXRZk5rjA=="],
   }
 }
