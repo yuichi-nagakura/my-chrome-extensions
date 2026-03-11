@@ -94,7 +94,8 @@ my-chrome-extensions/
     "lint": "biome lint ./packages",
     "format": "biome format --write ./packages",
     "check": "biome check ./packages",
-    "test": "bun test"
+    "test": "bun test",
+    "typecheck": "bunx tsc --noEmit"
   }
 }
 ```
@@ -127,9 +128,8 @@ const response = await claudeClient.complete({
 2. `manifest.json` を作成（Manifest V3）
 3. `package.json` を作成（`@my-ext/{name}` で命名）
 4. `src/` に `background.ts` / `content.ts` / `popup.ts` を実装
-5. root の `package.json` の `workspaces` に追加
-6. `bun install` を実行して依存関係を解決
-7. `bun run build` でビルド確認
+5. `bun install` を実行して依存関係を解決（workspaces glob で自動検出される）
+6. `bun run build` でビルド確認
 
 ---
 
