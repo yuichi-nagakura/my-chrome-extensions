@@ -12,7 +12,7 @@
     "typecheck": "bunx tsc --noEmit"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.0",
+    "@biomejs/biome": "^2.4.6",
     "@types/chrome": "^0.0.291"
   }
 }
