@@ -13,7 +13,7 @@ for (const ext of extensions) {
     entrypoints,
     outdir: outDir,
     target: "browser",
-    format: "esm",
+    format: "iife",
   });
 
   if (!result.success) {
